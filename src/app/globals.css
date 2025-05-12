@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-black: #1E1E1E;
+  --color-deepBlack: #000000;
+  --color-lightBlack: #1C1B1F;
+  --color-white: #FFFFFF;
+  --color-gray: #E1E1E1;
+  --color-darkGray: #767676;
+  --color-purple: #DE3163;
+  --color-transparentBlue: #3498DB99;
+  --color-pink: #8E44AD;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+/* Basic tailwind-like utilities */
+.custom-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .responsive-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
