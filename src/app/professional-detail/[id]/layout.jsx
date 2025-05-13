@@ -1,4 +1,4 @@
-export default function ProductLayout({
+export default function ProfessionalDetailsLayout({
     children,
   }) {
     return (
