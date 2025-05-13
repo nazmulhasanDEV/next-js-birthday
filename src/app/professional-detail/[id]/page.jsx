@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 const ProfessionalDetails = async ({params}) => {
-  const promise = new Promise(resolve => setTimeout(resolve, 2000));
   const { id } = await params;
   const res = await fetch(`https://68217315259dad2655af42ce.mockapi.io/api/v1/decorator-org/${id}/`);
   const professional = await res.json();
