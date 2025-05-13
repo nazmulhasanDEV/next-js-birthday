@@ -2,9 +2,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const ProfessionalCard = ({ data }) => {
+const ProfessionalCard = ({ key, data }) => {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full">
+    <div className="bg-white rounded-lg overflow-hidden shadow-md flex flex-col justify-between h-full" key={key}>
       {/* Image and Badges */}
       <div className="relative h-48">
         <Image
@@ -30,9 +30,9 @@ const ProfessionalCard = ({ data }) => {
           />
         </svg>
 
-        {data?.tags?.map((it) => {
+        {data?.tags?.map((it, index) => {
           return (
-            <span className="capitalize absolute top-2 left-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">
+            <span key={`index-${index}`} className="capitalize absolute top-2 left-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">
               {it}
             </span>
           );

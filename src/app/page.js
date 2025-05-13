@@ -16,10 +16,10 @@ const App = async () => {
           <SidebarFilterButtons />
           <div className="w-full md:w-4/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 px-4">
             <>
-              {professionals?.map((professional) => {
+              {professionals?.map((professional, index) => {
                 return (
                   <ProfessionalCard
-                    key={professional?.id}
+                    key={`index-${index}`}
                     data={professional}
                   />
                 );
